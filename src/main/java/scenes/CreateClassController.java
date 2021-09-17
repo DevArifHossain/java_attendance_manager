@@ -36,7 +36,7 @@ public class CreateClassController implements Initializable {
         System.out.println(sName);
 
         Object root = FXMLLoader.load(getClass().getResource("welcome.fxml"));
-        Scene scene = new Scene((Parent) root, 600, 480);
+        Scene scene = new Scene((Parent) root, 900, 600);
         HelloApplication.primaryStage.setScene(scene);
     }
 

@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.*;
 
 public class HelloApplication extends Application {
     public static Stage primaryStage;
@@ -13,14 +14,36 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 480);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        stage.setTitle("AAAAAAAAAAAATTTTEEEENNNNN!");
         stage.setScene(scene);
         stage.show();
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         launch();
     }
+
+//    public static void main(String[] args) throws SQLException {
+//        try {
+//            String url = "jdbc:mysql://localhost:3306/at_managment";
+//            String username = "root";
+//            String password = "14101999";
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection connection = DriverManager.getConnection(url, username, password);
+//            Statement statement = connection.createStatement();
+//            String connectQuery = "SELECT * FROM courses";
+//
+//            ResultSet queryOutput = statement.executeQuery(connectQuery);
+//
+//            while (queryOutput.next()) {
+//                System.out.println(queryOutput.getString("name"));
+//            }
+////            launch();
+//
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            throw new IllegalStateException("Cannot connect the database! :|");
+//        }
+//    }
 }
